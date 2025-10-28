@@ -8,7 +8,7 @@ public class Atendimento {
     private LocalTime fim;
     private Paciente paciente;
     private Medico medico;
-    private Enfermeiro enfermeiro; // novo: enfermeiro que participou (pode ser null)
+    private Enfermeiro enfermeiro;
 
     public Atendimento(Paciente paciente, Medico medico) {
         this(paciente, medico, null);
@@ -25,11 +25,25 @@ public class Atendimento {
         this.fim = LocalTime.now();
     }
 
-    public LocalTime getInicio() { return inicio; }
-    public LocalTime getFim() { return fim; }
-    public Paciente getPaciente() { return paciente; }
-    public Medico getMedico() { return medico; }
-    public Enfermeiro getEnfermeiro() { return enfermeiro; }
+    public LocalTime getInicio() {
+        return inicio;
+    }
+
+    public LocalTime getFim() {
+        return fim;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public Enfermeiro getEnfermeiro() {
+        return enfermeiro;
+    }
 
     @Override
     public String toString() {
